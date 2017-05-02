@@ -1,6 +1,6 @@
 GIT
   remote: https://github.com/decidim/decidim.git
-  revision: 5dd8f8ce7da81a177fc438cafdf855ff2d20c234
+  revision: d6cb63634a1206efcda748486d8a964c49175b87
   specs:
     decidim (0.0.9.pre)
       decidim-admin (= 0.0.9.pre)
@@ -93,7 +93,7 @@ GIT
       rspec-html-matchers (~> 0.9.1)
       rspec-rails (~> 3.5)
       rspec-repeat (~> 1.0.2)
-      rubocop (~> 0.47)
+      rubocop (~> 0.46.0)
       simplecov (~> 0.13)
       webmock (~> 3.0.1)
       wisper-rspec (~> 0.0.3)
@@ -302,7 +302,7 @@ GEM
     graphiql-rails (1.4.1)
       rails
     graphql (1.5.10)
-    hashdiff (0.3.2)
+    hashdiff (0.3.4)
     hashie (3.5.5)
     high_voltage (3.0.0)
     highline (1.7.8)
@@ -473,8 +473,9 @@ GEM
       virtus (~> 1.0.5)
       wisper (>= 1.6.1)
     redis (3.3.3)
-    responders (2.3.0)
-      railties (>= 4.2.0, < 5.1)
+    responders (2.4.0)
+      actionpack (>= 4.2.0, < 5.3)
+      railties (>= 4.2.0, < 5.3)
     rspec (3.5.0)
       rspec-core (~> 3.5.0)
       rspec-expectations (~> 3.5.0)
@@ -501,8 +502,8 @@ GEM
     rspec-repeat (1.0.2)
       rspec (~> 3.0)
     rspec-support (3.5.0)
-    rubocop (0.48.1)
-      parser (>= 2.3.3.1, < 3.0)
+    rubocop (0.46.0)
+      parser (>= 2.3.1.1, < 3.0)
       powerpack (~> 0.1)
       rainbow (>= 1.99.1, < 3.0)
       ruby-progressbar (~> 1.7)
