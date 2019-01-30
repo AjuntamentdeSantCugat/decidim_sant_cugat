@@ -22,7 +22,6 @@ ca:
           date_of_birth: Data de naixement
           document_number: Número de document
           district: Districte
-          census_section: Secció del cens
     shared:
       action_authorization_modal:
         expired:
