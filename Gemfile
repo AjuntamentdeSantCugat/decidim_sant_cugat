@@ -6,6 +6,7 @@ ruby '2.5.3'
 
 DECIDIM_VERSION = '~> 0.16.0'
 
+gem 'rails', '5.2.2.1'
 gem 'decidim', DECIDIM_VERSION
 
 gem 'virtus-multiparams'
