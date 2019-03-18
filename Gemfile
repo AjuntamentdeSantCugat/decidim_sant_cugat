@@ -6,6 +6,10 @@ ruby '2.5.3'
 
 DECIDIM_VERSION = '~> 0.16.0'
 
+# Force gem rails to 5.2.2.1 to fix some vulnerabilities
+# on actionview and railties
+# It can be removed when new stable version will be released or
+# when Decidim force the rails version
 gem 'rails', '5.2.2.1'
 gem 'decidim', DECIDIM_VERSION
 
