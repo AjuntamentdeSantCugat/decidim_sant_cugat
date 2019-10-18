@@ -316,6 +316,9 @@ GEM
     db-query-matchers (0.9.0)
       activesupport (>= 4.0, <= 6.0)
       rspec (~> 3.0)
+    decidim-term_customizer (0.18.0)
+      decidim-admin (~> 0.18.0)
+      decidim-core (~> 0.18.0)
     declarative-builder (0.1.0)
       declarative-option (< 0.2.0)
     declarative-option (0.1.0)
@@ -766,6 +769,7 @@ DEPENDENCIES
   database_cleaner
   decidim!
   decidim-dev!
+  decidim-term_customizer
   faker
   fog-aws
   listen

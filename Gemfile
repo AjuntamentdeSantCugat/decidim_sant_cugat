@@ -8,6 +8,10 @@ DECIDIM_VERSION = { git: 'https://github.com/decidim/decidim.git', branch: '0.18
 
 gem 'decidim', DECIDIM_VERSION
 
+# A Decidim module to customize the localized terms in the system.
+# Read more: https://github.com/CodiTramuntana/decidim-module-term_customizer
+gem "decidim-term_customizer"
+
 gem 'virtus-multiparams'
 
 gem 'faker'
