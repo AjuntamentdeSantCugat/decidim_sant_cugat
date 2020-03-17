@@ -4,7 +4,7 @@ source 'https://rubygems.org'
 
 ruby '2.6.5'
 
-DECIDIM_VERSION = { git: 'https://github.com/decidim/decidim.git', branch: 'develop' }
+DECIDIM_VERSION = { git: 'https://github.com/decidim/decidim.git', branch: 'release/0.21.0' }
 
 gem 'decidim', DECIDIM_VERSION
 gem 'sprockets', '~> 3.7', '< 4'
