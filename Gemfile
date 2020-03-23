@@ -12,7 +12,7 @@ gem 'sprockets', '~> 3.7', '< 4'
 # A Decidim module to customize the localized terms in the system.
 # Read more: https://github.com/mainio/decidim-module-term_customizer
 gem 'decidim-term_customizer', git: 'https://github.com/CodiTramuntana/decidim-module-term_customizer'
-gem 'decidim-verify_wo_registration', git: 'git@github.com:CodiTramuntana/decidim-verify_wo_registration.git'
+gem 'decidim-verify_wo_registration', git: 'https://github.com/CodiTramuntana/decidim-verify_wo_registration.git'
 
 gem 'virtus-multiparams'
 
