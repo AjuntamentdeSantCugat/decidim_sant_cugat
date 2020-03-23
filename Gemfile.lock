@@ -1,4 +1,13 @@
 GIT
+  remote: git@github.com:CodiTramuntana/decidim-verify_wo_registration.git
+  revision: 59fc0be4fc293e342fcb5f9226e5746774880776
+  specs:
+    decidim-verify_wo_registration (0.0.1)
+      decidim-budgets (>= 0.20)
+      decidim-core (>= 0.20)
+      decidim-proposals (>= 0.20)
+
+GIT
   remote: https://github.com/CodiTramuntana/decidim-module-term_customizer
   revision: 602f108dc611dfd125fffa94f92d6b9eae9f934c
   specs:
@@ -782,6 +791,7 @@ DEPENDENCIES
   decidim!
   decidim-dev!
   decidim-term_customizer!
+  decidim-verify_wo_registration!
   excon (>= 0.71.0)
   faker
   fog-aws
