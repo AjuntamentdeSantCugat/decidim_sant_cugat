@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_03_17_100052) do
+ActiveRecord::Schema.define(version: 2020_03_26_171916) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "ltree"
@@ -413,6 +413,14 @@ ActiveRecord::Schema.define(version: 2020_03_17_100052) do
     t.string "decidim_author_type", null: false
     t.index ["decidim_author_id", "decidim_author_type"], name: "index_decidim_debates_debates_on_decidim_author"
     t.index ["decidim_component_id"], name: "index_decidim_debates_debates_on_decidim_component_id"
+  end
+
+  create_table "decidim_file_authorization_handler_census_data", force: :cascade do |t|
+    t.bigint "decidim_organization_id"
+    t.string "id_document"
+    t.date "birthdate"
+    t.datetime "created_at", null: false
+    t.index ["decidim_organization_id"], name: "decidim_census_data_org_id_index"
   end
 
   create_table "decidim_follows", force: :cascade do |t|

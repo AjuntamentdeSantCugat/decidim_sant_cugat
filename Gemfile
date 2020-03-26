@@ -13,6 +13,8 @@ gem 'sprockets', '~> 3.7', '< 4'
 # Read more: https://github.com/mainio/decidim-module-term_customizer
 gem "decidim-term_customizer", git: 'https://github.com/CodiTramuntana/decidim-module-term_customizer'
 
+gem 'decidim-file_authorization_handler', git: 'https://github.com/CodiTramuntana/decidim-file_authorization_handler.git'
+
 gem 'virtus-multiparams'
 
 gem 'faker'
@@ -26,9 +28,9 @@ end
 
 group :development do
   gem 'listen'
-  gem 'spring'
-  gem 'spring-commands-rspec'
-  gem 'spring-watcher-listen'
+  # gem 'spring'
+  # gem 'spring-commands-rspec'
+  # gem 'spring-watcher-listen'
 end
 
 group :production do
