@@ -12,24 +12,9 @@ module Decidim
     end
 
     def call
-      Sidekiq.logger.info "
-        **********
-
-        Dentro del InviteUserAgain en el call antes del return, user&.invited_to_sign_up?:\n
-        #{user&.invited_to_sign_up?}
-        
-        **********
-      "
-      return broadcast(:invalid) unless user&.invited_to_sign_up?
-
-      Sidekiq.logger.info "
-        **********
-
-        Dentro del InviteUserAgain en el call después del return, user.invited_by:\n
-        #{user.invited_by}
-
-        **********
-      "
+      # This return is the one that prevents the user to be invited to a private
+      # participatory space if they signed up by themselves instead of by an invitation.
+      # return broadcast(:invalid) unless user&.invited_to_sign_up?
 
       user.invite!(user.invited_by, invitation_instructions: instructions)
 
