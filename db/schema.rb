@@ -14,6 +14,7 @@ ActiveRecord::Schema.define(version: 2020_03_17_100052) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "ltree"
+  enable_extension "pg_stat_statements"
   enable_extension "pg_trgm"
   enable_extension "plpgsql"
 
@@ -306,7 +307,7 @@ ActiveRecord::Schema.define(version: 2020_03_17_100052) do
 
   create_table "decidim_categorizations", force: :cascade do |t|
     t.bigint "decidim_category_id", null: false
-    t.string "categorizable_type", null: false
+    t.string "categorizable_type"
     t.bigint "categorizable_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
@@ -1274,9 +1275,9 @@ ActiveRecord::Schema.define(version: 2020_03_17_100052) do
     t.datetime "newsletter_notifications_at"
     t.string "type", null: false
     t.jsonb "extended_data", default: {}
+    t.string "notification_types", default: "all", null: false
     t.integer "following_count", default: 0, null: false
     t.integer "followers_count", default: 0, null: false
-    t.string "notification_types", default: "all", null: false
     t.integer "failed_attempts", default: 0, null: false
     t.string "unlock_token"
     t.datetime "locked_at"
