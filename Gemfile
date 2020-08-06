@@ -4,7 +4,7 @@ source 'https://rubygems.org'
 
 ruby '2.6.5'
 
-DECIDIM_VERSION = { git: 'https://github.com/decidim/decidim.git', branch: 'release/0.21.0' }
+DECIDIM_VERSION = { git: 'https://github.com/decidim/decidim.git', branch: 'release/0.21-stable' }
 
 gem 'decidim', DECIDIM_VERSION
 gem 'sprockets', '~> 3.7', '< 4'
@@ -18,7 +18,7 @@ gem 'virtus-multiparams'
 gem 'faker'
 gem 'puma'
 gem 'uglifier'
-gem 'geocoder', '1.5.2'
+gem 'geocoder', '~> 1.5.2'
 
 group :development, :test do
   gem 'byebug', platform: :mri
