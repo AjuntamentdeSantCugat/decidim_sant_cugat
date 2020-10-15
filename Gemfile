@@ -12,13 +12,13 @@ gem 'sprockets', '~> 3.7', '< 4'
 # A Decidim module to customize the localized terms in the system.
 # Read more: https://github.com/mainio/decidim-module-term_customizer
 gem "decidim-term_customizer", git: 'https://github.com/CodiTramuntana/decidim-module-term_customizer'
+gem 'decidim-verify_wo_registration', git: "https://github.com/CodiTramuntana/decidim-verify_wo_registration.git"
 
 gem 'virtus-multiparams'
 
 gem 'faker'
 gem 'puma'
 gem 'uglifier'
-gem 'geocoder', '~> 1.5.2'
 
 group :development, :test do
   gem 'byebug', platform: :mri
