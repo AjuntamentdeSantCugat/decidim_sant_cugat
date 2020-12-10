@@ -2,7 +2,7 @@
 
 source 'https://rubygems.org'
 
-ruby '2.6.5'
+ruby '2.6.6'
 
 DECIDIM_VERSION = { git: 'https://github.com/decidim/decidim.git', branch: 'release/0.23-stable' }
 
