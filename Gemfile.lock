@@ -17,7 +17,7 @@ GIT
 
 GIT
   remote: https://github.com/decidim/decidim.git
-  revision: 7566625e0f75b593ae0eaca31f07ccb92bf95b76
+  revision: 16f01e467ad0de06e9bac3d4c98066387a335c3e
   branch: release/0.23-stable
   specs:
     decidim (0.23.1)
@@ -544,8 +544,9 @@ GEM
       rack (>= 1.6.2, < 3)
     omniauth-facebook (5.0.0)
       omniauth-oauth2 (~> 1.2)
-    omniauth-google-oauth2 (0.8.0)
+    omniauth-google-oauth2 (0.8.1)
       jwt (>= 2.0)
+      oauth2 (~> 1.1)
       omniauth (>= 1.1.1)
       omniauth-oauth2 (>= 1.6)
     omniauth-oauth (1.1.0)
@@ -635,7 +636,7 @@ GEM
       activesupport (>= 4.1.0)
       virtus (~> 1.0.5)
       wisper (>= 1.6.1)
-    redcarpet (3.5.0)
+    redcarpet (3.5.1)
     redis (4.2.5)
     regexp_parser (1.8.2)
     request_store (1.5.0)
