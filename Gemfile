@@ -7,7 +7,7 @@ ruby '2.6.6'
 DECIDIM_VERSION = { git: 'https://github.com/decidim/decidim.git', branch: 'release/0.23-stable' }
 
 gem 'decidim', DECIDIM_VERSION
-gem 'sprockets', '~> 3.7', '< 4'
+#gem 'sprockets', '~> 3.7', '< 4'
 
 # A Decidim module to customize the localized terms in the system.
 # Read more: https://github.com/mainio/decidim-module-term_customizer
@@ -42,6 +42,7 @@ group :production do
   gem 'fog-aws'
   # security fix for excon gem, which is a fog-aws dependency
   gem 'excon', '>= 0.71.0'
+  gem 'rails_autoscale_agent'
 end
 
 group :test do

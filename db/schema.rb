@@ -14,7 +14,6 @@ ActiveRecord::Schema.define(version: 2020_12_09_125563) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "ltree"
-  enable_extension "pg_stat_statements"
   enable_extension "pg_trgm"
   enable_extension "plpgsql"
 
@@ -338,7 +337,7 @@ ActiveRecord::Schema.define(version: 2020_12_09_125563) do
 
   create_table "decidim_categorizations", force: :cascade do |t|
     t.bigint "decidim_category_id", null: false
-    t.string "categorizable_type"
+    t.string "categorizable_type", null: false
     t.bigint "categorizable_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
@@ -473,6 +472,14 @@ ActiveRecord::Schema.define(version: 2020_12_09_125563) do
     t.index ["decidim_user_group_id"], name: "index_decidim_endorsements_on_decidim_user_group_id"
     t.index ["resource_type", "resource_id", "decidim_author_type", "decidim_author_id", "decidim_user_group_id"], name: "idx_endorsements_rsrcs_and_authors", unique: true
     t.index ["resource_type", "resource_id"], name: "index_decidim_endorsements_on_resource_type_and_resource_id"
+  end
+
+  create_table "decidim_file_authorization_handler_census_data", force: :cascade do |t|
+    t.bigint "decidim_organization_id"
+    t.string "id_document"
+    t.date "birthdate"
+    t.datetime "created_at", null: false
+    t.index ["decidim_organization_id"], name: "decidim_census_data_org_id_index"
   end
 
   create_table "decidim_follows", force: :cascade do |t|
@@ -1334,9 +1341,9 @@ ActiveRecord::Schema.define(version: 2020_12_09_125563) do
     t.datetime "newsletter_notifications_at"
     t.string "type", null: false
     t.jsonb "extended_data", default: {}
-    t.string "notification_types", default: "all", null: false
     t.integer "following_count", default: 0, null: false
     t.integer "followers_count", default: 0, null: false
+    t.string "notification_types", default: "all", null: false
     t.integer "failed_attempts", default: 0, null: false
     t.string "unlock_token"
     t.datetime "locked_at"
