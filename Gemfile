@@ -2,12 +2,11 @@
 
 source 'https://rubygems.org'
 
-ruby '2.6.6'
+ruby '2.7.2'
 
 DECIDIM_VERSION = { git: 'https://github.com/decidim/decidim.git', branch: 'release/0.23-stable' }
 
 gem 'decidim', DECIDIM_VERSION
-#gem 'sprockets', '~> 3.7', '< 4'
 
 # A Decidim module to customize the localized terms in the system.
 # Read more: https://github.com/mainio/decidim-module-term_customizer
