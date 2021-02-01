@@ -34,6 +34,7 @@ Decidim::Verifications.register_workflow(:census_authorization_handler) do |auth
   auth.form = "CensusAuthorizationHandler"
 
   auth.options do |options|
+    options.attribute :district_council, type: :string, required: false
     options.attribute :district, type: :string, required: false
   end
 end

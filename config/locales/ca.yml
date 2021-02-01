@@ -3,7 +3,8 @@ ca:
     attributes:
       census_authorization_handler:
         date_of_birth: Data de naixement
-        district: Districte d'empadronament
+        district: Barri
+        district_council: Consell de Barri
         document_number: Número de DNI
   census_authorization:
     form:
@@ -20,8 +21,9 @@ ca:
         name: El padró municipal
         fields:
           date_of_birth: Data de naixement
+          district: Barri
+          district_council: Consell de Barri
           document_number: Número de document
-          district: Districte
     shared:
       action_authorization_modal:
         expired:

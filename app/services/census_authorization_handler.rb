@@ -31,8 +31,8 @@ class CensusAuthorizationHandler < Decidim::AuthorizationHandler
   # it's created, and available though authorization.metadata
   def metadata
     {
-      district: response["distrito"],
-      census_section: response["seccionCensal"]
+      district_council: response["consellBarri"],
+      district: response["barri"],
     }
   end
 
