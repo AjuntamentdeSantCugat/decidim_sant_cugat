@@ -37,6 +37,15 @@ ca:
           explanation: Per dur a terme aquesta acció, has d'estar autoritzat/da amb el padró municipal.
         unauthorized:
           invalid_field: "%{field} no és correcte"
+  verifications:
+    census_authorization:
+      extra_explanation:
+        districts:
+          one: La participació està restringida a les persones adscrites al barri %{districts}.
+          other: 'La participació està restringida a les persones adscrites a algun dels següents barris: %{districts}.'
+        district_councils:
+          one: La participació està restringida a les persones adscrites al consell de barri %{district_concils}.
+          other: 'La participació està restringida a les persones adscrites a algun dels següents consells de barri: %{district_councils}.'
   devise:
     failure:
       user:
