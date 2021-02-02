@@ -70,7 +70,10 @@ class CensusAuthorizationHandler < Decidim::AuthorizationHandler
     end
 
     @response ||= JSON.parse(response.body)
-  rescue JSON::ParserError => _exception
+    Rails.logger.debug("Census responded with: #{@response["res"]}")
+    @response
+  rescue JSON::ParserError => exception
+    Rails.logger.warn("Something went wrong while connecting to the census endpoint: #{exception.message}")
     nil
   end
 
