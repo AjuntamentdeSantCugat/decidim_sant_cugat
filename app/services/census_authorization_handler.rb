@@ -31,8 +31,8 @@ class CensusAuthorizationHandler < Decidim::AuthorizationHandler
   # it's created, and available though authorization.metadata
   def metadata
     {
-      district: response["distrito"],
-      census_section: response["seccionCensal"]
+      district_council: response["consellBarri"],
+      district: response["barri"],
     }
   end
 
@@ -70,7 +70,10 @@ class CensusAuthorizationHandler < Decidim::AuthorizationHandler
     end
 
     @response ||= JSON.parse(response.body)
-  rescue JSON::ParserError => _exception
+    Rails.logger.debug("Census responded with: #{@response["res"]}")
+    @response
+  rescue JSON::ParserError => exception
+    Rails.logger.warn("Something went wrong while connecting to the census endpoint: #{exception.message}")
     nil
   end
 

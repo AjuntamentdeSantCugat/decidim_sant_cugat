@@ -50,7 +50,7 @@ describe "Authorizations", type: :system, perform_enqueued: true, with_authoriza
       fill_in_authorization_form
       click_button "Enviar"
 
-      expect(page).to have_content("amb èxit")
+      expect(page).to have_content("Has estat autoritzada amb correctament")
 
       visit decidim_verifications.authorizations_path
 
@@ -72,7 +72,6 @@ describe "Authorizations", type: :system, perform_enqueued: true, with_authoriza
 
         within ".authorizations-list" do
           expect(page).to have_content("El padró")
-          expect(page).not_to have_link("El padró")
           expect(page).to have_content(I18n.localize(authorization.granted_at, format: :long, locale: :ca))
         end
       end
