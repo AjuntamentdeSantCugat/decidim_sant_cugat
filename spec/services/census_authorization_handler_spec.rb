@@ -70,7 +70,8 @@ describe CensusAuthorizationHandler do
     before do
       allow(handler)
         .to receive(:response)
-        .and_return(JSON.parse("{ \"res\": 1, \"barri\":\"2\",\"consellBarri\":\"1\" }"))
+        # the Webservice returns values with some trailing spaces
+        .and_return(JSON.parse("{ \"res\": 1, \"barri\":\" 2 \",\"consellBarri\":\" 1 \" }"))
     end
 
     it_behaves_like "an authorization handler"
