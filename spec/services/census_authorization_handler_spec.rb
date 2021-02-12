@@ -70,6 +70,7 @@ describe CensusAuthorizationHandler do
     before do
       allow(handler)
         .to receive(:response)
+        # the Webservice returns values with some trailing spaces
         .and_return(JSON.parse("{ \"res\": 1, \"barri\":\" 2 \",\"consellBarri\":\" 1 \" }"))
     end
 
