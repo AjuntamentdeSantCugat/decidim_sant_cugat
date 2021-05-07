@@ -1,4 +1,4 @@
-module StatisticsHelper
+module Statistics
   def percentage_participants_of_zone(target, census_data, total_participants_zone)
     total_participants = census_data.select { |participant| total_participants_zone.include? participant }
     

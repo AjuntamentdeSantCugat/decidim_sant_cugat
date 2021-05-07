@@ -1,6 +1,6 @@
 require 'csv'
-require "#{Rails.root}/app/helpers/statistics_helper"
-include StatisticsHelper
+require "#{Rails.root}/lib/statistics"
+include Statistics
 
 namespace :statistics do
   desc "Get statistics by gender and age"
